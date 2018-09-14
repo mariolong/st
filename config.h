@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "mono:pixelsize=22:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -86,26 +86,27 @@ unsigned int tabspaces = 8;
 unsigned int alpha = 0xed;
 
 static const char *colorname[] = {
-	"#073642",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#eee8d5",  /*  7: white    */
-	"#002b36",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#586e75",  /* 10: brgreen  */
-	"#657b83",  /* 11: bryellow */
-	"#839496",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#93a1a1",  /* 14: brcyan   */
-	"#fdf6e3",  /* 15: brwhite  */
+	"black",  /*  0: black    */
+	"red3",  /*  1: red      */
+	"green3",  /*  2: green    */
+	"yellow3",  /*  3: yellow   */
+	"blue2",  /*  4: blue     */
+	"magenta3",  /*  5: magenta  */
+	"cyan3",  /*  6: cyan     */
+	"gray90",  /*  7: white    */
+	"gray50",  /*  8: brblack  */
+	"red",  /*  9: brred    */
+	"green",  /* 10: brgreen  */
+	"yellow",  /* 11: bryellow */
+	"#5c5cff",  /* 12: brblue   */
+	"magenta",  /* 13: brmagenta*/
+	"cyan",  /* 14: brcyan   */
+	"white",  /* 15: brwhite  */
 	/* more colors can be added after 255 to use with DefaultXX */
+	[255]=0,
 	"black",   /* 256 -> bg */
-	"#00cc00", /* 257 -> fg */
-    "magenta"  /* 258 -> cursor */
+	"#f99157", /* 257 -> fg */
+    "#f99157"  /* 258 -> cursor */
 };
 
 
@@ -113,10 +114,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 12;
+unsigned int defaultfg = 7;
 unsigned int defaultbg = 256;
-static unsigned int defaultcs = 14;
-static unsigned int defaultrcs = 15;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 258;
 
 /*
  * Default shape of cursor
